@@ -12,7 +12,7 @@ frame_2.config(background='black')
 frame_3 = tk.Frame(root)
 frame_3.grid(row=2, column=0)
 frame_3.config(background='black')
-
+#pol
 pole1 = tk.Text(frame_1, width=60, height=3)
 pole2 = tk.Entry(frame_2, width=60)
 pole1.grid(row=0, column=0)
