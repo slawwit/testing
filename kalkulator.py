@@ -17,19 +17,22 @@ pole1 = tk.Text(frame_1, width=60, height=3)
 pole2 = tk.Entry(frame_2, width=60)
 pole1.grid(row=0, column=0)
 pole2.grid(row=1, column=0)
-BUT1 = (("", "","","/"), ("7","8","9", "X"),("4","5","6","-"), ("1", "2", "3", "+"), ("", "0", ",", "="))
+BUT1 = (("", "C","CE","/"), ("7","8","9", "X"),("4","5","6","-"), ("1", "2", "3", "+"), ("-/+", "0", ",", "="))
 v = 0
 c = 0
-r = 1
-col = 0
+
+
+def function(ar):
+    pole2.insert(10,ar)
+    print(ar)
+
+
 def didi(ar):
-    b = tk.Button(frame_3, text=ar, width=15, height=3)
+    b = tk.Button(frame_3, text=ar, width=15, height=3, command=lambda:function(ar))
     b.grid(row=c, column=v)
-    print("v=", v)
 
 
 for arg in BUT1:
-    print("c=", c)
     for ar in BUT1[c]:
         if v == 4:
             v = 0
